@@ -102,7 +102,7 @@ form{
 	width:100%;
 	height: 45px;	
 	margin: 0 auto;
-	background: url(../images/templatemo_menu_bg.gif) repeat-x;
+	background: url(../images/templatemo_menu_bg.gif) repeat;
 	color: #ffffff;
 }
 
@@ -182,13 +182,13 @@ form{
 	background: url(../images/templatemo_post_bg_repeat.gif) repeat;
 	border: 5px solid #3b3023;
 	margin-bottom: 15px;	
+	margin-top: 15px;
 }
 
 #templatemo_content_left .templatemo_post {
 	width: 530px;
 	padding: 25px 30px 0 30px;
 	background: url(../images/templatemo_post_bg.gif) top center no-repeat;
-	
 }
 
 * html #templatemo_content_left .templatemo_post {
@@ -213,17 +213,77 @@ form{
 
 .templatemo_post .post_body{
 	width: 100%;
+	position: relative;
 }
 
 .templatemo_post .post_body img{
-	margin-bottom: 15px;
+	margin-top: 1rem;
+	padding: 1.6rem;
+	width: 200px;
+	border: none;
 }
+
+.aging-effect {
+	filter: brightness(0.4);
+	filter: grayscale(80%);
+	filter: sepia(60%);
+	
+}
+
+
 
 .templatemo_post .post_body p{
 	font-size: 1.2rem;
 	font-family: Sabon;
 	line-height: 1.4;
 }
+
+.pagin_div {
+	display: flex;
+	justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.pagination ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+}
+
+.pagination li {
+	list-style: none;
+}
+
+.pagination a {
+  padding-left: 10px;
+  font-size: 1rem;
+}
+
+.pagination a.current {
+  color: black;
+}
+
+.pagination a:hover {
+	text-decoration: underline;
+}
+
+.pagination a.disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  text-decoration: none;
+  color: #817373;
+}
+
+.pagination a.disabled:hover {
+	text-decoration: none;
+}
+
+
 
 .templatemo_post .post_comment{
 	width: 100%;
@@ -237,8 +297,7 @@ form{
 	width: 250px;
 	color: #bd8956;
 	padding: 15px 15px 10px 15px;
-	margin-bottom: 10px;
-	border-bottom: 1px solid #684018;
+
 }
 
 #templatemo_content_right .templatemo_right_section form{
@@ -309,4 +368,103 @@ form{
 
 #templatemo_footer_panel #templatemo_footer_section a {
 	color:#dbc1a7;
+}
+
+#mini_menu {
+	display: none;
+}
+
+@media (max-width: 1100px) {
+	#templatemo_content_container #templatemo_content {
+    	width: auto;
+    	padding: 0;
+	}
+
+	#templatemo_content_right {
+		width: 100%;
+	}
+
+	#templatemo_content_left {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		float: none;
+	}
+
+	#templatemo_header_panel #templatemo_title_section {
+		width: 100%;
+	}
+
+	#templatemo_menu_panel #templatemo_menu_section {
+    width: 100%;
+    padding: 0 ;
+	}
+
+	#templatemo_menu_section ul {
+		display: flex;
+		flex-wrap: wrap;
+	    width: 100%; 
+    	margin: 0;
+    	padding: 7px 0 0 0;
+	}
+
+	#templatemo_bottom_panel #templatemo_bottom_section {
+    	width: 100%;
+    	padding: 0;
+    }
+
+    #templatemo_footer_panel #templatemo_footer_section {
+    	width: 100%;
+    	padding: 0;
+    }
+
+    #templatemo_bottom_section .templatemo_bottom_section_content {
+    display: inherit;
+    float: left;
+    width: 20%;
+    margin-bottom: 15px;
+    color: #dbc1a7;
+	}
+}
+
+
+@media (max-width: 780px) {
+	#templatemo_title_section h1 {
+		font-size: 2rem;
+	}
+
+	#templatemo_menu_panel {
+    /* width: 100%; */
+    height: auto;
+    /* margin: 0 auto; */
+    background: url(../images/templatemo_menu_bg.gif) repeat;
+    color: #ffffff;
+	}
+
+	/*#lg_menu {
+		display: none;
+	}*/
+
+	/*#mini_menu {
+		display: block;
+	}*/
+
+	#templatemo_content_right .templatemo_right_section form {
+		padding: 0;
+		display: flex;
+	}
+
+	#templatemo_content_right .templatemo_right_section form input[type=submit] {
+		margin-left: 15px;
+	}
+}
+
+
+
+
+
+@media (max-width: 650px) {
+#templatemo_content_left .templatemo_post {
+	width: 90%;
+	padding: 20px;
 }

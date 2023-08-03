@@ -11,5 +11,6 @@ from ckeditor.fields import RichTextField
 
 class Text(models.Model):
     text = RichTextField()
-    photo = models.ImageField(upload_to='photos/')
+    # photo = models.ImageField(upload_to='photos/', null=True)
     date_created = models.DateTimeField(auto_now_add=True)
+
